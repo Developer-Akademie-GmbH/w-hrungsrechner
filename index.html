@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Währungsrechner</title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+      body {
+        background-color: #323232;
+        margin: 0;
+        font-family: 'Open Sans', sans-serif;
+        color: white;
+        font-size: 24px;
+      }
+
+      div {
+        min-height: 100px;
+        margin-bottom: 50px;
+      }
+
+      .navbar{
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background-color: rgba(255,255,255, 0.1);
+      }
+
+      .flag {
+        width: 60px;
+        position: absolute;
+        left: 50px;
+      }
+
+      input {
+        height: 60px;
+        background-color: transparent;
+        border: 1px solid rgba(255,255,255,0.4);
+        border-radius:10px;
+        flex: 1;
+        padding-left: 100px;
+        color: white;
+        font-size: 24px;
+        text-align: center;
+
+      }
+
+      .input-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 32px;
+        padding-right: 32px;
+        position: relative;
+      }
+
+      .currency {
+        position: absolute;
+        right: 42px;
+        font-size: 14px;
+        color: #4472c4;
+        font-weight: 700;
+        bottom: 24px;
+      }
+      .container-center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      button {
+        background-color: #ffff32;
+        padding: 0 32px;
+        height: 50px;
+        border: unset;
+        font-size: 24px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+        cursor: pointer;
+      }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <img src="img/menu.png" alt="" />
+      Währungsrechner
+    </div>
+
+    <div class="input-container">
+      <img class="flag" src="img/eu.png" alt="" />
+      <input value="100" id="euroField" type="number" />
+      <span class="currency">EUR</span>
+    </div>
+
+    <div class="container-center">
+      <img src="img/arrows.png" alt="" />
+    </div>
+
+    <div class="input-container">
+      <img class="flag" src="img/usa.png" alt="" />
+      <input id="usd" type="text" />
+      <span class="currency">USD</span>
+    </div>
+
+    <div class="container-center">
+      <button onclick="calc()">Berechnen</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
